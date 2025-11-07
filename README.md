@@ -126,9 +126,3 @@ Website ini juga dilengkapi dengan fitur akun pengguna, sistem pembayaran, infor
 - Menampilkan data akun pengguna yang sudah login.<br>
 - Fitur yang tersedia:<br>
   - Edit profil (nama, foto, email)<br>
-
-## Documentation
-
-Cara kembali ke list page
-
-![Guide Untuk Back ke List Page](./documentation/guide.gif)
