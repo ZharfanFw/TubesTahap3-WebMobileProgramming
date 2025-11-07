@@ -99,6 +99,9 @@
 </template>
 
 <script>
+import { useRouter } from "vue-router";
+const router = useRouter();
+
 export default {
   name: "MethodPayment",
 
@@ -531,7 +534,7 @@ export default {
   margin: 0 24px 24px;
   padding: 16px;
   background-color: var(--color-secondary);
-  color: var(--color-white);
+  color: #ff8c00;
   border: none;
   border-radius: 12px;
   font-size: 16px;
@@ -545,6 +548,7 @@ export default {
   background-color: #ff8c00;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(255, 162, 0, 0.4);
+  color: var(--color-white);
 }
 
 .submit-button:active:not(:disabled) {

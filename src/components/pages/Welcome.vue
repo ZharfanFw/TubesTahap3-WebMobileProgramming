@@ -2,6 +2,9 @@
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 import { ref } from "vue"
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const showOverlay = ref(false)
 
@@ -172,7 +175,7 @@ const slides = [
 
       <!-- Tombol "Lihat Selengkapnya" -->
       <div class="button-container">
-        <button class="button-primary">
+        <button class="button-primary" @click="router.push('/memancing-section')">
           Lihat Selengkapnya
         </button>
       </div>

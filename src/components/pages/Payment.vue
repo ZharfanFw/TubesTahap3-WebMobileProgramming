@@ -83,10 +83,10 @@
 
       <!-- Action Buttons -->
       <div class="action-buttons">
-        <button class="booking-again-btn" @click="handleBookingAgain">
+        <button class="booking-again-btn" @click="router.push('/booking')">
           Booking Lagi
         </button>
-        <button class="confirm-pay-btn" @click="handleConfirmPayment">
+        <button class="confirm-pay-btn" @click="router.push('/method-payment')">
           Konfirmasi & Bayar
         </button>
       </div>
@@ -94,88 +94,84 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "PaymentConfirmation",
+<script setup>
+// --- KONVERSI KE SCRIPT SETUP ---
+import { ref, computed } from "vue";
+import { useRouter } from "vue-router"; // <-- INI YANG ANDA MAU
 
-  data() {
-    return {
-      bookingInfo: {
-        placeName: "Kolam Pancing Sari Alam",
-        location: "Lembang, Bandung",
-        date: "2025-11-11",
-        time: "11:31",
-        duration: 2,
-        persons: 1,
-        pricePerHour: 50000,
-      },
-      equipmentList: [
-        {
-          id: 1,
-          name: "Kursi Lipat",
-          type: "Sewa",
-          quantity: 1,
-          pricePerUnit: 20000,
-          total: 20000,
-        },
-      ],
-    };
+// Panggil useRouter di level atas
+const router = useRouter();
+
+// --- KONVERSI DARI data() ---
+const bookingInfo = ref({
+  placeName: "Kolam Pancing Sari Alam",
+  location: "Lembang, Bandung",
+  date: "2025-11-11",
+  time: "11:31",
+  duration: 2,
+  persons: 1,
+  pricePerHour: 50000,
+});
+
+const equipmentList = ref([
+  {
+    id: 1,
+    name: "Kursi Lipat",
+    type: "Sewa",
+    quantity: 1,
+    pricePerUnit: 20000,
+    total: 20000,
   },
+]);
 
-  computed: {
-    bookingCost() {
-      return this.bookingInfo.pricePerHour * this.bookingInfo.duration;
-    },
+// --- KONVERSI DARI computed: ---
+const bookingCost = computed(() => {
+  return bookingInfo.value.pricePerHour * bookingInfo.value.duration;
+});
 
-    equipmentTotal() {
-      return this.equipmentList.reduce((sum, item) => sum + item.total, 0);
-    },
+const equipmentTotal = computed(() => {
+  return equipmentList.value.reduce((sum, item) => sum + item.total, 0);
+});
 
-    grandTotal() {
-      return this.bookingCost + this.equipmentTotal;
-    },
-  },
+const grandTotal = computed(() => {
+  return bookingCost.value + equipmentTotal.value;
+});
 
-  methods: {
-    formatCurrency(amount) {
-      return new Intl.NumberFormat("id-ID", {
-        style: "currency",
-        currency: "IDR",
-        minimumFractionDigits: 0,
-      }).format(amount);
-    },
+// --- KONVERSI DARI methods: ---
+function formatCurrency(amount) {
+  return new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 0,
+  }).format(amount);
+}
 
-    formatNumber(amount) {
-      return new Intl.NumberFormat("id-ID").format(amount);
-    },
+function formatNumber(amount) {
+  return new Intl.NumberFormat("id-ID").format(amount);
+}
 
-    formatDate(dateString) {
-      const date = new Date(dateString);
-      return date.toLocaleDateString("id-ID", {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
-    },
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  return date.toLocaleDateString("id-ID", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
 
-    handleBookingAgain() {
-      // Navigate back to booking page or emit event
-      this.$emit("booking-again");
-      console.log("Booking lagi clicked");
-    },
+// --- PERBAIKAN HANDLE ---
+function handleBookingAgain() {
+  // Gunakan router dari useRouter()
+  router.push("/booking");
+  console.log("Booking lagi clicked, navigating to /booking");
+}
 
-    handleConfirmPayment() {
-      // Process payment or emit event
-      this.$emit("confirm-payment", {
-        bookingInfo: this.bookingInfo,
-        equipmentList: this.equipmentList,
-        grandTotal: this.grandTotal,
-      });
-      console.log("Konfirmasi pembayaran:", this.grandTotal);
-    },
-  },
-};
+function handleConfirmPayment() {
+  // Gunakan router dari useRouter()
+  router.push("/method-payment");
+  console.log("Konfirmasi pembayaran, navigating to /method-payment");
+}
 </script>
 
 <style scoped>

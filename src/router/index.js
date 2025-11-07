@@ -4,14 +4,23 @@ import Welcome from "@/components/pages/Welcome.vue";
 import BookingSection from "@/components/pages/BookingSection.vue";
 import SignUp from "@/components/pages/Sign-up.vue";
 import Payment from "@/components/pages/Payment.vue";
-import Welcome from "@/components/pages/Welcome.vue";
 import MethodPayment from "@/components/pages/MethodPayment.vue";
 import MemancingSection from "@/components/pages/MemancingSection.vue";
 import Cart from "@/components/pages/Cart.vue";
+import ReviewSection from "@/components/pages/ReviewSection.vue";
+import AllTampilan from "@/components/pages/AllTampilan.vue";
+import Login from "@/components/pages/Login.vue";
+import Kelompok from "@/components/pages/Kelompok.vue";
+import UserProfil from "@/components/pages/UserProfil.vue";
 
 const routes = [
   {
     path: "/",
+    name: "AllTampilan",
+    component: AllTampilan,
+  },
+  {
+    path: "/home",
     name: "Welcome",
     component: Welcome,
   },
@@ -19,6 +28,11 @@ const routes = [
     path: "/signup",
     name: "SignUp",
     component: SignUp,
+  },
+  {
+    path: "/Login",
+    name: "Login",
+    component: Login,
   },
   {
     path: "/payment",
@@ -41,9 +55,24 @@ const routes = [
     component: Cart,
   },
   {
-    path: "/booking".
+    path: "/booking",
     name: "Booking",
     component: BookingSection,
+  },
+  {
+    path: "/review",
+    name: "ReviewSection",
+    component: ReviewSection,
+  },
+  {
+    path: "/kelompok",
+    name: "Kelompok",
+    component: Kelompok,
+  },
+  {
+    path: "/profil",
+    name: "UserProfil",
+    component: UserProfil,
   },
 ];
 

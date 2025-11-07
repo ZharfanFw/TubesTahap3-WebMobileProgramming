@@ -1,6 +1,7 @@
 <script setup>
 import HeaderPage from './HeaderPage.vue'
 import FooterPage from './FooterPage.vue'
+import UserProfil from '../pages/UserProfil.vue'
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import FooterPage from './FooterPage.vue'
     <HeaderPage />
 
     <main>
+      <!-- <UserProfil /> -->
       <RouterView />
     </main>
 

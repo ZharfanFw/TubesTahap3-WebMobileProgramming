@@ -145,7 +145,7 @@
           Total Harga
           <span>{{ formattedTotalPrice }}</span>
         </div>
-        <button class="continue-btn">Lanjut Sewa/Beli Alat</button>
+        <button class="continue-btn" @click="router.push('/cart')">Lanjut Sewa/Beli Alat</button>
       </div>
     </div>
   </div>
@@ -153,6 +153,9 @@
 
 <script setup>
 import { ref, computed } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+
 
 const PRICE_PER_SEAT_PER_HOUR = 10000;
 const MAX_BOOKINGS = 5;

@@ -1,6 +1,6 @@
 <template>
   <div class="cart-container">
-    <HeaderPage />
+    <!-- Header Page -->
     <div class="products-grid">
       <div v-for="product in products" :key="product.id" class="product-card">
         <div class="product-image-wrapper">
@@ -101,6 +101,7 @@
       </button>
     </div>
 
+    <!-- PANEL KERANJANG: Muncul jika ada item -->
     <div class="cart-panel" v-if="cartItems.length > 0">
       <div class="cart-panel-header">
         <h3 class="cart-panel-title">Keranjang Belanja</h3>
@@ -165,17 +166,18 @@
         </button>
       </div>
     </div>
+
+    <!-- PANEL LANJUTKAN: Muncul jika keranjang kosong -->
+    <div class="footer-panel-empty" v-if="cartItems.length === 0">
+      <button class="continue-button" @click="goToPayment">Lanjutkan</button>
+    </div>
   </div>
 </template>
 
 <script>
-import HeaderPage from "@/components/layouts/HeaderPage.vue";
+// --- FIX: IMPORT HEADERPAGE ---
 export default {
   name: "MemancingSection",
-  components: {
-    HeaderPage,
-  },
-
   data() {
     // Definisi data produk dengan penambahan properti 'stock'
     return {
@@ -443,6 +445,17 @@ export default {
       });
       console.log("Checkout:", this.cartItems);
     },
+
+    // --- METHOD BARU UNTUK TOMBOL LANJUTKAN ---
+    goToPayment() {
+      // Pastikan router tersedia. Jika menggunakan Options API,
+      // Anda akan menggunakan 'this.$router.push'.
+      // Jika Anda setup router di main.js dan app.use(router),
+      // this.$router seharusnya bekerja.
+      // Jika tidak, Anda mungkin perlu mengimpor router di sini.
+      // Untuk kesederhanaan, kita asumsikan $router tersedia.
+      this.$router.push("/payment");
+    },
   },
 };
 </script>
@@ -461,6 +474,7 @@ export default {
 }
 
 /* ===== VARIABEL WARNA ===== */
+/* Pastikan variabel ini didefinisikan di global style Anda atau di sini */
 :root {
   --color-primary: #03045e;
   --color-secondary: #48cae4;
@@ -489,6 +503,8 @@ export default {
   padding-top: 100px; /* Nilai contoh. Sesuaikan sesuai tinggi header Anda, misalnya 80px atau 100px */
   background-color: #fafafa;
   min-height: 100vh;
+  /* PENTING: Tambahkan padding-bottom agar panel fixed tidak menutupi konten */
+  padding-bottom: 120px;
 }
 
 /* ===== PRODUCTS GRID ===== */
@@ -862,6 +878,38 @@ export default {
 .checkout-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 213, 255, 0.4);
+}
+
+/* --- STYLE BARU UNTUK PANEL KOSONG --- */
+.footer-panel-empty {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  padding: 20px 24px;
+  z-index: 1000;
+}
+
+.continue-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #020338 100%);
+  color: var(--color-white);
+  border: 1px solid var(--color-primary);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(3, 4, 94, 0.3);
+}
+.continue-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(3, 4, 94, 0.4);
 }
 
 /* ===== RESPONSIVE ===== */

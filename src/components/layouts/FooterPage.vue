@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
   background: var(--color-white);
   color: var(--color-primary-deep);

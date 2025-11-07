@@ -1,5 +1,4 @@
 <template>
-  <HeaderPage title="Memancing Section" />
   <div class="memancing-section">
     <!-- Search Bar -->
     <div class="search-container">
@@ -163,12 +162,8 @@
 </template>
 
 <script>
-import HeaderPage from "@/components/layouts/HeaderPage.vue";
 export default {
   name: "MemancingSection",
-  components: {
-    HeaderPage,
-  },
 
   data() {
     return {
@@ -439,6 +434,13 @@ export default {
     },
   },
 };
+
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+function goToReview(tempat) {
+  router.push({ name: 'ReviewSection', params: { id: tempat.nama } })
+}
 </script>
 
 <style scoped>
@@ -460,7 +462,6 @@ export default {
   /* Tingkatkan padding atas untuk memberi ruang di bawah header */
   padding: 24px; /* Ganti atau tambahkan baris di bawah */
   padding-top: 100px; /* Nilai contoh. Sesuaikan sesuai tinggi header Anda, misalnya 80px atau 100px */
-  background-color: #fafafa;
   min-height: 100vh;
 }
 
