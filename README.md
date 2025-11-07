@@ -131,6 +131,4 @@ Website ini juga dilengkapi dengan fitur akun pengguna, sistem pembayaran, infor
 
 Cara kembali ke list page
 
-<p align="center">
-  <img src="./documentation/guide.GIF" width="500">
-</p>
+![Guide Untuk Back ke List Page](./documentation/guide.GIF)
