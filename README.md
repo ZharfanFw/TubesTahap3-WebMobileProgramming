@@ -131,4 +131,4 @@ Website ini juga dilengkapi dengan fitur akun pengguna, sistem pembayaran, infor
 
 Cara kembali ke list page
 
-![Guide Untuk Back ke List Page](./documentation/guide.GIF)
+![Guide Untuk Back ke List Page](./documentation/guide.gif)
