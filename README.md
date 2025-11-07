@@ -41,4 +41,9 @@ npm run build
 KailKu adalah website berbasis Vue.js yang dirancang untuk mempermudah pengguna dalam booking tempat pemancingan serta membeli atau menyewa alat pancing di tempat yang telah dipilih.
 Website ini juga dilengkapi dengan fitur akun pengguna, sistem pembayaran, informasi lomba, dan tips memancing agar pengalaman memancing menjadi lebih mudah dan menyenangkan.
 
+<h2>🚀 Fitur Utama</h2>
+<h3>1. Navigasi & Tampilan Awal</h3>
+* Halaman utama (index 0) berfungsi sebagai pintu masuk ke seluruh halaman website.
+* Untuk kembali ke halaman utama, pengguna cukup menekan logo "KailKu" yang terdapat di bagian header.
+* Tampilan awal menampilkan navigasi utama menuju berbagai halaman dan fitur yang tersedia di dalam aplikasi.
 
