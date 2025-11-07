@@ -43,7 +43,7 @@ Website ini juga dilengkapi dengan fitur akun pengguna, sistem pembayaran, infor
 
 <h2>🚀 Fitur Utama</h2>
 <h3>1. Navigasi & Tampilan Awal</h3>
-* Halaman utama (index 0) berfungsi sebagai pintu masuk ke seluruh halaman website.
-* Untuk kembali ke halaman utama, pengguna cukup menekan logo "KailKu" yang terdapat di bagian header.
-* Tampilan awal menampilkan navigasi utama menuju berbagai halaman dan fitur yang tersedia di dalam aplikasi.
+* Halaman utama (index 0) berfungsi sebagai pintu masuk ke seluruh halaman website.<br>
+* Untuk kembali ke halaman utama, pengguna cukup menekan logo "KailKu" yang terdapat di bagian header.<br>
+* Tampilan awal menampilkan navigasi utama menuju berbagai halaman dan fitur yang tersedia di dalam aplikasi.<br>
 
