@@ -51,3 +51,15 @@ Website ini juga dilengkapi dengan fitur akun pengguna, sistem pembayaran, infor
 <h3>🏠 Indeks 0 – Halaman Depan</h3>
 * Berisi nama dan kelompok pengembang website.<br>
 * Menjadi halaman utama yang menavigasi pengguna ke seluruh bagian website.<br>
+
+<h3>🌊 Indeks 1 – Landing Page</h3>
+
+* Merupakan tampilan awal website bagi pengguna baru.<br>
+* Terdapat search bar untuk mencari tempat pemancingan berdasarkan nama atau lokasi.<br>
+* Saat pengguna scroll ke bawah, akan muncul beberapa tempat pemancingan.<br>
+* Tombol “Lihat Selengkapnya” berfungsi untuk menampilkan daftar tempat pemancingan lebih banyak.<br>
+* Scroll lebih lanjut akan menampilkan:<br>
+    * Tips & Trik Memancing<br>
+    * Informasi Lomba Memancing Terbaru<br>
+
+
