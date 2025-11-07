@@ -1,9 +1,10 @@
 <script setup>
-// Hapus import Welcome, biarkan router yang handle
+import Layout from './components/layouts/Layout.vue'
 </script>
 
 <template>
-  <router-view />
+  <Layout />
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>

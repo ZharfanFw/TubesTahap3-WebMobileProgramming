@@ -1,4 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
+
+import Welcome from "@/components/pages/Welcome.vue";
+import BookingSection from "@/components/pages/BookingSection.vue";
 import SignUp from "@/components/pages/Sign-up.vue";
 import Payment from "@/components/pages/Payment.vue";
 import Welcome from "@/components/pages/Welcome.vue";
@@ -36,6 +39,11 @@ const routes = [
     path: "/cart",
     name: "Cart",
     component: Cart,
+  },
+  {
+    path: "/booking".
+    name: "Booking",
+    component: BookingSection,
   },
 ];
 
