@@ -36,3 +36,10 @@ npm run dev
 ```sh
 npm run build
 ```
+
+<h1>🐟 KailKu – Website Pemesanan Tempat & Perlengkapan Memancing<h1/>
+
+KailKu adalah website berbasis Vue.js yang dirancang untuk mempermudah pengguna dalam booking tempat pemancingan serta membeli atau menyewa alat pancing di tempat yang telah dipilih.
+Website ini juga dilengkapi dengan fitur akun pengguna, sistem pembayaran, informasi lomba, dan tips memancing agar pengalaman memancing menjadi lebih mudah dan menyenangkan.
+
+
