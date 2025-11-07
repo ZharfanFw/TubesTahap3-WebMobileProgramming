@@ -188,7 +188,7 @@ const slides = [
     <img src="../../assets/img/separator/wave-2.svg" alt="Separator Atas" class="sep-top">
     <div class="content-wrapper">
       <h1 class="main-title">
-        Tips & Ensiklopedia
+        Tips & Trick
       </h1>
 
       <div class="tips-grid">
