@@ -193,8 +193,8 @@ export default {
           price: 5000,
           rating: 4,
           type: "beli",
-          image:
-            "https://img.lazcdn.com/g/ff/kf/S351a17c65a684ebf9d3c5c606d4d1819B.jpg_720x720q80.jpg",
+          image: new URL("@/assets/img/cart/kaila-1.avif", import.meta.url)
+            .href,
           stock: 5, // STOK DITAMBAHKAN
         },
         {
