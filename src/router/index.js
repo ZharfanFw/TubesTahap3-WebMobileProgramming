@@ -1,20 +1,50 @@
 import { createRouter, createWebHistory } from "vue-router";
+
 import Welcome from "@/components/pages/Welcome.vue";
 import BookingSection from "@/components/pages/BookingSection.vue";
-// import TempatSection from "@/components/pages/TempatSection.vue";
-// import ShopSection from "@/components/pages/ShopSection.vue";
-// import SewaSection from "@/components/pages/SewaSection.vue";
-// import LoginSection from "@/components/pages/LoginSection.vue";
-// import SignupSection from "@/components/pages/SignupSection.vue";
+import SignUp from "@/components/pages/Sign-up.vue";
+import Payment from "@/components/pages/Payment.vue";
+import Welcome from "@/components/pages/Welcome.vue";
+import MethodPayment from "@/components/pages/MethodPayment.vue";
+import MemancingSection from "@/components/pages/MemancingSection.vue";
+import Cart from "@/components/pages/Cart.vue";
 
 const routes = [
-  { path: "/", component: Welcome },
-  { path: "/booking", component: BookingSection },
-  //  { path: "/tempat", component: TempatSection },
-  //  { path: "/shop", component: ShopSection },
-  //  { path: "/sewa", component: SewaSection },
-  // { path: "/login", component: LoginSection },
-  // { path: "/signup", component: SignupSection },
+  {
+    path: "/",
+    name: "Welcome",
+    component: Welcome,
+  },
+  {
+    path: "/signup",
+    name: "SignUp",
+    component: SignUp,
+  },
+  {
+    path: "/payment",
+    name: "Payment",
+    component: Payment,
+  },
+  {
+    path: "/method-payment",
+    name: "MethodPayment",
+    component: MethodPayment,
+  },
+  {
+    path: "/memancing-section",
+    name: "MemancingSection",
+    component: MemancingSection,
+  },
+  {
+    path: "/cart",
+    name: "Cart",
+    component: Cart,
+  },
+  {
+    path: "/booking".
+    name: "Booking",
+    component: BookingSection,
+  },
 ];
 
 const router = createRouter({

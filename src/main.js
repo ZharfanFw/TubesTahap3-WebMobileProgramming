@@ -1,7 +1,7 @@
 import { createApp } from "vue";
-import "./style.css";
+import "./style.css"; // ✅ CSS sudah di-import
 import App from "./App.vue";
-import router from "./router";
+import router from "./router"; // ✅ Router sudah di-import
 
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
