@@ -1,10 +1,29 @@
 <script setup>
 import HeaderPage from './HeaderPage.vue'
+import FooterPage from './FooterPage.vue'
 </script>
 
 <template>
-  <HeaderPage />
-  <FooterPage />
+  <div class="layout">
+    <HeaderPage />
+
+    <main>
+      <RouterView />
+    </main>
+
+    <FooterPage />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* biar footer selalu di bawah layar */
+}
+
+main {
+  padding-top: 80px;
+  flex: 1; /* isi tengah akan mengisi sisa ruang di antara header dan footer */
+}
+</style>
