@@ -1,9 +1,9 @@
 <script setup>
-import Welcome from './components/pages/Welcome.vue'
+// Hapus import Welcome, biarkan router yang handle
 </script>
 
 <template>
-  <Welcome />
+  <router-view />
 </template>
 
 <style scoped></style>
