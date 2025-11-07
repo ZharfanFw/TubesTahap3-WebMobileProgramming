@@ -1,31 +1,28 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <header>
     <nav class="navbar">
       <div class="nav-left">
         <h1>
-          <a href="#home"><span>Kail</span>Ku</a>
+          <router-link to="/"><span>Kail</span>Ku</router-link>
         </h1>
       </div>
 
       <div class="nav-middle">
-        <a href="#home">Beranda</a>
+        <router-link to="/">Beranda</router-link>
         <a href="">Tempat Pemancingan</a>
-        <a href="#alat">Alat Pancing</a>
       </div>
 
       <nav class="nav-right">
         <a href="login-section.html" class="login-btn">Masuk</a>
-        <a href="signup-section.html" class="signup-btn">Daftar</a>
+        <router-link to="/signup" class="signup-btn">Daftar</router-link>
       </nav>
     </nav>
   </header>
 </template>
 
 <style scoped>
-
 .navbar {
   background-color: var(--color-white);
   padding: 0.5rem 0;
@@ -33,11 +30,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 
 .nav-left h1 {
   font-size: 2rem;
   margin-left: 2rem;
+  color: var(--color-black);
+}
+
+.nav-left h1 a {
   color: var(--color-black);
 }
 
@@ -88,9 +94,8 @@
 }
 
 .signup-btn:hover {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   border: 1px solid var(--color-primary-dark);
   background-color: var(--color-primary-dark);
 }
-
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-import HeaderPage from './HeaderPage.vue'
+import HeaderPage from "./HeaderPage.vue";
 </script>
 
 <template>
