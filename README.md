@@ -132,5 +132,5 @@ Website ini juga dilengkapi dengan fitur akun pengguna, sistem pembayaran, infor
 Cara kembali ke list page
 
 <p align="center">
-  <img src="./assets/demo.gif" width="500">
+  <img src="./documentation/guide.GIF" width="500">
 </p>
