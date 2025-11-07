@@ -47,3 +47,7 @@ Website ini juga dilengkapi dengan fitur akun pengguna, sistem pembayaran, infor
 * Untuk kembali ke halaman utama, pengguna cukup menekan logo "KailKu" yang terdapat di bagian header.<br>
 * Tampilan awal menampilkan navigasi utama menuju berbagai halaman dan fitur yang tersedia di dalam aplikasi.<br>
 
+<h2>🧭 Struktur Halaman (Indeks)</h2>
+<h3>🏠 Indeks 0 – Halaman Depan</h3>
+* Berisi nama dan kelompok pengembang website.<br>
+* Menjadi halaman utama yang menavigasi pengguna ke seluruh bagian website.<br>
