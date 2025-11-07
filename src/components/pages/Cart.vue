@@ -204,8 +204,8 @@ export default {
           price: 8000,
           rating: 5,
           type: "sewa",
-          image:
-            "https://img.lazcdn.com/g/p/07384b595913eab2011549c827f96c27.jpg_720x720q80.jpg",
+          image: new URL("@/assets/img/cart/premium.avif", import.meta.url)
+            .href,
           stock: 2, // STOK DITAMBAHKAN
         },
         {
@@ -215,8 +215,10 @@ export default {
           price: 150000,
           rating: 4,
           type: "beli",
-          image:
-            "https://img.lazcdn.com/g/p/8e11ed03702e185e0f884b4925d7e785.jpg_720x720q80.jpg",
+          image: new URL(
+            "@/assets/img/cart/joranteleskopik3m.avif",
+            import.meta.url
+          ).href,
           stock: 0, // STOK HABIS
         },
         {
@@ -226,8 +228,7 @@ export default {
           price: 70000,
           rating: 5,
           type: "sewa",
-          image:
-            "https://img.lazcdn.com/g/p/872a241f8c6a2056c308b139f14452de.jpg_960x960q80.jpg_.webp",
+          image: new URL("@/assets/img/cart/reel.avif", import.meta.url).href,
           stock: 3, // STOK DITAMBAHKAN
         },
         {
@@ -237,8 +238,8 @@ export default {
           price: 50000,
           rating: 4,
           type: "sewa",
-          image:
-            "https://id-live-01.slatic.net/p/f1e0f872d57c8fab31ced07ec5190f6e.jpg",
+          image: new URL("@/assets/img/cart/adunfishing.avif", import.meta.url)
+            .href,
           stock: 10, // STOK DITAMBAHKAN
         },
         {
@@ -248,8 +249,8 @@ export default {
           price: 35000,
           rating: 5,
           type: "beli",
-          image:
-            "https://img.lazcdn.com/g/p/66998abb8ac2bb97dfacd51cf8ebfad5.jpg_720x720q80.jpg",
+          image: new URL("@/assets/img/cart/senarsuper.avif", import.meta.url)
+            .href,
           stock: 7, // STOK DITAMBAHKAN
         },
         {
@@ -259,8 +260,7 @@ export default {
           price: 15000,
           rating: 4,
           type: "beli",
-          image:
-            "https://img.lazcdn.com/g/ff/kf/S6c8334df06e64ba2aa22a5b4321db14cC.jpg_720x720q80.jpg",
+          image: new URL("@/assets/img/cart/minnow.avif", import.meta.url).href,
           stock: 12,
         },
         {
@@ -270,8 +270,7 @@ export default {
           price: 45000,
           rating: 3,
           type: "beli",
-          image:
-            "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/9/18/fd13a008-79d1-4a6c-9109-0f26b65d3f17.jpg",
+          image: new URL("@/assets/img/cart/jumbo.avif", import.meta.url).href,
           stock: 4,
         },
         {
@@ -281,8 +280,7 @@ export default {
           price: 60000,
           rating: 5,
           type: "sewa",
-          image:
-            "https://static.jakmall.id/2022/11/images/products/2dd3a7/detail/jaring-ikan-lipat-dekagonal-20-hole-fishing-net-trap-cage-h14572.jpg",
+          image: new URL("@/assets/img/cart/jaring.avif", import.meta.url).href,
           stock: 1,
         },
         {
@@ -292,8 +290,8 @@ export default {
           price: 280000,
           rating: 5,
           type: "beli",
-          image:
-            "https://img.lazcdn.com/g/p/d1b86f39e2effd566811cd35794205fe.png_720x720q80.png",
+          image: new URL("@/assets/img/cart/joranpro.avif", import.meta.url)
+            .href,
           stock: 6,
         },
       ],
